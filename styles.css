@@ -3,6 +3,7 @@
     margin:0px;
     /*border:1px solid red */
 }
+
 /*HEADER*/
 header{
     display: flex;
@@ -11,9 +12,9 @@ header{
     background-position: center; 
     background-size: 100% ;
     background-image: url("/assets/img/banner.png");
+    background-repeat: no-repeat;
     height:300px;
     width: 100%;
-    top: 0;
 }
 
 header .cabecera{ 
@@ -63,7 +64,6 @@ header .cabecera .registroLogin{
     
     margin:0px 40px 0px 0px;
     padding-right:20px;
-
 }
 header .cabecera .registroLogin .registro{
     height: 43px;
@@ -76,7 +76,6 @@ header .cabecera .registroLogin .registro{
     color:white;
     margin-right:20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
  }
  header .cabecera .registroLogin .login{
     height: 43px;
@@ -90,6 +89,12 @@ header .cabecera .registroLogin .registro{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
  }
+ /* MENÚ HAMBURGUESA PARA CELULARES*/
+.burger {
+    width: 100%;
+    display:none;
+}
+
  /*BOTON DE CREAR EVENTO*/
  header .botonCrearEvento {
     display: flex;
@@ -135,7 +140,8 @@ main{
 .centerFilter{
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    gap:15px;
     border-radius: 25px;
     background-color:#D8E450;
     width: 450px;
@@ -146,23 +152,31 @@ main{
 }
 .centerFilter div{
     border-right:1px solid #5250C8;
-    margin-right: 5px;
-    padding-right: 5px;
+    padding-right:15px;
+
     cursor: pointer;
 
 }
 .centerFilter div:nth-child(4n){
-    width: 25%;
-    border-right:none;
-    margin-right: none;
-    padding-right: none;
     display: inline-flex;
     justify-content: space-between;
+
+    width: 25%;
+    border-right:none;
+    padding-right:none;
+
 
 }
 .centerFilter p{
     color:#5250C8;
     font-weight: bold;
+}
+.centerFilter div button {
+    background-color: #D8E450;
+    border: none;
+    color:#5250C8;
+    font-weight: bolder;
+
 }
 /* categorías temáticas y filtros Hoy y "Por día"*/
 
@@ -201,6 +215,7 @@ main{
     align-items: center;
     margin: 20px 0px 20px 0px;
     cursor: pointer;
+    
 }
 .cards div{
     justify-content:space-evenly; 
@@ -215,6 +230,7 @@ main{
 }
 .cards img{
     display: block;
+
     max-width: 100%;
     height: auto;
     border-top-right-radius:25px;
@@ -225,6 +241,7 @@ main{
 footer{
     display: flex;
     justify-content:space-between;
+
     padding:20px 0px 0px 0px;
 
 }
@@ -236,9 +253,160 @@ footer p{
     display: flex;
     justify-content: space-between; 
     gap:50px;
+
     padding-right: 20px;
 
 }
 .redesSociales a img{
     width:25px;
+}
+@media only screen and (max-width: 800px) {
+
+    header {
+        background-position:top; 
+        height: 130px;
+        padding:0px 0px 0px 0px;
+        display: flex;
+        justify-content: space-between; 
+        margin-bottom:20px
+    }
+    .cabecera{ 
+        align-items: center; 
+        position: fixed; 
+        font-size: 20px;     
+    }
+    .cabecera .logo a img {
+        width:40px;
+    }
+    .registroLogin a button{
+        display:none;
+    }
+    .burger {
+        width: 100%;
+        display:inline;
+        padding-left:300px
+    }
+    .botonCrearEvento{
+        display: flex;
+        align-items:center;
+
+    }
+    .botonCrearEvento a button{
+        font-size: 8px;
+        margin:80px 340px 0px 0px;
+        height:30px;
+        width: 90px;
+    }
+    .filters{
+        display: flex;
+        flex-direction: column;
+        padding-top: 0%;
+        gap: 50px;
+
+    }
+    .centerFilter{
+        display: flex;
+        flex-direction: column;
+        width: 290px;
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border:0px none ;
+    }
+    .centerFilter div{
+        border-right: none;
+        border:2px solid  #D8E450;
+    }
+    .dayFilters{
+       gap: 30px;
+        margin-bottom:20px
+    }
+    .categories{
+        flex-direction: row;
+    }
+    .cards{
+        display: flex;
+        flex-direction:column;
+    }
+    .footer{
+        display: flex;
+        padding:0px 0px 0px 0px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    header {
+        background-position:top; 
+        height: 130px;
+        padding:0px 0px 0px 0px;
+        display: flex;
+        justify-content: space-between; 
+
+    }
+    .cabecera{ 
+        align-items: center; 
+        position: fixed; 
+        font-size: 20px;     
+    }
+    .cabecera .logo a img {
+        width:40px;
+    }
+    .registroLogin a button{
+        display:none;
+    }
+    .burger {
+        width: 100%;
+        display:block;
+        padding-left:100px
+
+    }
+    .botonCrearEvento{
+        display: flex;
+        align-items:center;
+
+    }
+    .botonCrearEvento a button{
+        font-size: 8px;
+        margin:70px 150px 0px 0px;
+        height:30px;
+        width: 90px;
+    }
+    .filters{
+        display: flex;
+        flex-direction: column;
+        padding-top: 0%;
+        gap: 50px;
+
+    }
+    .centerFilter{
+        display: flex;
+        flex-direction: column;
+        width: 290px;
+        height: fit-content;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border:0px none ;
+    }
+    .centerFilter div{
+        border-right: none;
+        border:2px solid  #D8E450;
+    }
+    .dayFilters{
+       gap: 30px;
+        margin-bottom:20px
+    }
+    .categories{
+        flex-direction: row;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer{
+        display: flex;
+        padding:0px 0px 0px 0px;
+    }
+
 }
