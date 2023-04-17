@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">    
-    <link rel="icon" href="img/camping2_1.ico">
+    <link rel="stylesheet" href="styles.css">    
+    <link rel="icon" href="/assets/img/camping2_1.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>PARQUE</title>
 </head>
 <body>
@@ -14,53 +15,60 @@
     <header>
         <div class="cabecera">
             <div class="logo">        
-                <a href="#"><img src="./img/camping.png" alt="instagram"></a>
+                <a href="#"><img src="/assets/img/camping.png" alt="instagram"></a>
                 <a href="#"><p>PARQUE</p></a>
             </div>
-            <div class="reservaLogin">            
-                <button class="reserva">REGISTRO</button>
-                <button class="login">LOGIN</button>
+            <div class="registroLogin">            
+                <a href="/components/registerLogin/register.html"><button class="registro">REGISTRO</button></a>
+                <a href="/components/registerLogin/login.html"><button class="login">LOGIN</button></a>
             </div>
         </div>
     <!--aca va la imagen de fondo y el boton de evento-->
-        <div class="botonCrearEvento"><button>Crear Mi Evento</button></div>
+        <div class="botonCrearEvento"><a href="/components/product/createProduct/newProduct.html"><button>Crear Mi Evento</button></a></div>
     </header>
 <!--aca empieza el main--> 
     <main>
         <!--aca van los FILTROS--> 
-        <div class="buscador"><p>ACA van los filtros centrales</p></div>
-        <div class="filtros">
-
-            <div class="filtrosI">
-                <a href="#"><img src="./img/iconos/settings.png" alt="instagram"></a>
-                <a href="#"><img src="./img/iconos/infantil.png" alt="instagram"></a>
-                <a href="#"><img src="./img/iconos/gastro.png" alt="instagram"></a>
-                <a href="#"><img src="./img/iconos/biking.png" alt="instagram"></a>
+        <div class="filters">
+            <div class="categories">
+                <a href="#"><img src="/assets/img/icons/settings.png" alt="instagram"></a>
+                <a href="#"><img src="/assets/img/icons/infantil.png" alt="instagram"></a>
+                <a href="#"><img src="/assets/img/icons/gastro.png" alt="instagram"></a>
+                <a href="#"><img src="/assets/img/icons/biking.png" alt="instagram"></a>
             </div>
-
-            <div class="filtrosD">
+            <div class="centerFilter">
+                <div><p>por nombre evento </p></div>
+                <div><p>lugar</p></div>
+                <div><p>fecha</p></div>
+                <div>
+                    <button><i class="fa fa-search"></i></button>
+                    <p> Limpiar </p> 
+                </div>
+            </div>
+            <div class="dayFilters">
                 <button>HOY</button>
                 <button>Por Día</button>
             </div>
-
         </div>
+
         <!--aca van las CARDS--> 
         <div class="cards">
-            <div><p>CARD 1</p></div>
-            <div><p>CARD 2</p></div>
-            <div><p>CARD 3</p></div>
-            <div><p>CARD 4</p></div>
+            <div><a href="/components/product/details.html"><img src="/assets/img/music/music01.png" alt="product"></a><p>CARD 1</p></div>
+            <div><a href="/components/product/details.html"><img src="/assets/img/music/music01.png" alt="product"></a><p>CARD 2</p></div>
+            <div><a href="/components/product/details.html"><img src="/assets/img/music/music01.png"alt="product"></a><p>CARD 3</p></div>
+            <div><a href="/components/product/details.html"><img src="/assets/img/music/music01.png" alt="product"></a><p>CARD 4</p></div>
         </div>
     </main>
+
 <!--aca empieza el Footer--> 
     <footer>
         <p>2023 PARQUE    .  Privacy   .   Terms</p>
         <div class="redesSociales">
-            <a href="#"><img src="./img/iconos/instagram.png" alt="instagram">
+            <a href="#"><img src="/assets/img/icons/instagram.png" alt="instagram">
             </a>
-            <a href="#"><img src="./img/iconos/facebook.png" alt="facebook">
+            <a href="#"><img src="/assets/img/icons/facebook.png" alt="facebook">
             </a>
-            <a href="#"><img src="./img/iconos/gorjeo.png" alt="tweeter">
+            <a href="#"><img src="/assets/img/icons/gorjeo.png" alt="tweeter">
             </a>
         </div>
     </footer>

@@ -1,0 +1,244 @@
+
+*{
+    margin:0px;
+    /*border:1px solid red */
+}
+/*HEADER*/
+header{
+    display: flex;
+    flex-direction: column; /* controla el botón de crear Mi Evento*/
+    
+    background-position: center; 
+    background-size: 100% ;
+    background-image: url("/assets/img/banner.png");
+    height:300px;
+    width: 100%;
+    top: 0;
+}
+
+header .cabecera{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: fixed;
+
+    height: 25px; 
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.38); 
+    font-family: fantasy;
+    color:rgb(255, 255, 255);
+    padding: 20px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+header .cabecera .logo{ 
+    display: flex;
+    justify-content:flex-start;
+    align-items: center; 
+    
+    height: 25px; 
+    width:100%;
+    font-family: fantasy;
+    font-size: 23px;
+    color:rgb(255, 255, 255);
+    padding: 20px 20px 20px 20px;
+
+}
+ 
+header .cabecera a img{ 
+    width: 50px;
+    padding-right:20px;
+
+} 
+header .cabecera a {
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+
+}
+
+/*BOTONES de RESERVA Y LOGIN*/
+header .cabecera .registroLogin{ 
+    display: flex;
+    justify-content: flex-end;
+    
+    margin:0px 40px 0px 0px;
+    padding-right:20px;
+
+}
+header .cabecera .registroLogin .registro{
+    height: 43px;
+    width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #E9207E;    
+    border: none;
+    color:white;
+    margin-right:20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+ }
+ header .cabecera .registroLogin .login{
+    height: 43px;
+    width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0);    
+    border: 2px solid  #E9207E;
+    color: #E9207E;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+ }
+ /*BOTON DE CREAR EVENTO*/
+ header .botonCrearEvento {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+
+}
+header .botonCrearEvento button{
+    height: 43px;
+    width: 120px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0);    
+    border: 2px solid white;
+    color:white;
+    margin:170px 100px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+/* MAIN*/
+main{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(255, 255, 255);
+    color:black;
+    width: 100%;
+}
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between; 
+    gap:93px
+}
+
+/* filtro central*/
+.centerFilter{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border-radius: 25px;
+    background-color:#D8E450;
+    width: 450px;
+    height: 80px;
+    margin-top:-30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.centerFilter div{
+    border-right:1px solid #5250C8;
+    margin-right: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+
+}
+.centerFilter div:nth-child(4n){
+    width: 25%;
+    border-right:none;
+    margin-right: none;
+    padding-right: none;
+    display: inline-flex;
+    justify-content: space-between;
+
+}
+.centerFilter p{
+    color:#5250C8;
+    font-weight: bold;
+}
+/* categorías temáticas y filtros Hoy y "Por día"*/
+
+.categories{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between; 
+    gap:50px;
+
+}
+.dayFilters{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between; 
+    gap:50px
+}
+.dayFilters button{
+    height: 30px;
+    width: 80px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.183);    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 2px solid white;
+    color:rgb(145, 144, 144);
+}
+
+/*tarjetas de productos */
+.cards{
+    display: flex;
+    gap : 20px;
+
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+    cursor: pointer;
+}
+.cards div{
+    justify-content:space-evenly; 
+
+    color:black;
+    height: 250px;
+    width:260px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cards img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-top-right-radius:25px;
+    border-top-left-radius:25px;
+}
+
+/*FOOTER*/
+footer{
+    display: flex;
+    justify-content:space-between;
+    padding:20px 0px 0px 0px;
+
+}
+footer p{
+    padding-left: 20px;
+
+}
+.redesSociales{
+    display: flex;
+    justify-content: space-between; 
+    gap:50px;
+    padding-right: 20px;
+
+}
+.redesSociales a img{
+    width:25px;
+}
