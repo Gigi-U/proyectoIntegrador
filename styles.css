@@ -361,19 +361,7 @@ footer p{
         gap: 50px;
 
     }
-    .centerFilter{
-        display: flex;
-        flex-direction: column;
-        width: 290px;
-        height: fit-content;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border:0px none ;
-    }
-    .centerFilter div{
-        border-right: none;
-        border:2px solid  #D8E450;
-    }
+
     .dayFilters{
        gap: 30px;
         margin-bottom:20px
