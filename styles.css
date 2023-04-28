@@ -258,20 +258,18 @@ main{
 
 
 /*tarjetas de productos */
-.cards{
+#cards{
     display: flex;
-    gap : 20px;
-
+    gap : 10px;
     align-items: center;
     margin: 20px 0px 20px 0px;
     cursor: pointer;
     
 }
-.cards div{
+#cards div{
     justify-content:space-evenly; 
-
     color:black;
-    height: 250px;
+    height: 253px;
     width:260px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
@@ -279,13 +277,17 @@ main{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: box-shadow 0.5s;
 }
-.cards div:hover {
+#cards div p{
+    font-size: 15px;
+}
+
+#cards div:hover {
     cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
   
-.cards img{
+#cards img{
     display: block;
 
     max-width: 100%;
@@ -376,7 +378,7 @@ footer p{
     .categories{
         flex-direction: row;
     }
-    .cards{
+    #cards{
         display: flex;
         flex-direction:column;
     }
@@ -464,7 +466,7 @@ footer p{
         gap: 15px;
     }
 
-    .cards{
+    #cards{
         display: flex;
         flex-direction: column;
     }
