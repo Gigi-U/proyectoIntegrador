@@ -9,7 +9,7 @@ UI -https://www.figma.com/file/dCXR5GLsK6umzCkGRJ6OCV/PARQUE--CodoACodo?node-id=
 Sitio Web Responsive para encontrar y crear eventos al aire libre.
 Cuenta con:
 1) página de inicio con filtros de evento por categorías, fecha, lugar y nombre del evento
-2) lágina de Registro de usuario
+2) Página de Registro de usuario
 3) Página de Login de usuario
 4) Página de detalle del evento con boton Agendar Evento
 5) Página de creación de nuevo evento
