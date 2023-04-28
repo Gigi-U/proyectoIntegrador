@@ -7,8 +7,7 @@
 /*HEADER*/
 header{
     display: flex;
-    flex-direction: column; /* controla el botón de crear Mi Evento*/
-    
+    flex-direction: column; /* controla el botón de crear Mi Evento*/    
     background-position: top; 
     background-size: 100%;
     background-image: url("/assets/img/banner.png");
@@ -59,14 +58,12 @@ header .cabecera a img{
 header .cabecera a {
     text-decoration:none;
     color:rgb(255, 255, 255);
-
 }
 
 /*BOTONES de RESERVA Y LOGIN*/
 header .cabecera .registroLogin{ 
     display: flex;
-    justify-content: flex-end;
-    
+    justify-content: flex-end;    
     margin:0px 40px 0px 0px;
     padding-right:20px;
 }
