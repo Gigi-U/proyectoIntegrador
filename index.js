@@ -36,7 +36,7 @@ function recorrerListadoYRenderizarTarjetas() {
     listadoEventos.forEach( evento => {
       cards.innerHTML += `
         <div>
-          <a href="/components/product/details.html"><img src = ${evento.img} alt = "lenguajes"><a>
+          <a href="/components/product/details.html"><img src = ${evento.img} alt = "evento"><a>
           <p>${evento.fecha} | ${evento.lugar} </p>
           <p>
             <b>${evento.titulo}</b><br> 
