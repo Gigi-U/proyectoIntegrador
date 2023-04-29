@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">    
+    <link rel="icon" href="/assets/img/logo/camping2_1.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PARQUE</title>
+</head>
+<body>
+<!--aca empieza el HEADER--> 
+    <!--aca empieza la Cabecera transparente--> 
+    <header>
+        <div class="cabecera">
+            <div class="logo">        
+                <a href="#"><img src="/assets/img/logo/camping.png" alt="instagram"></a>
+                <a href="#"><p>PARQUE</p></a>
+            </div>
+            <div class="registroLogin">            
+                <a href="/components/registerLogin/register/register.html"><button class="registro">REGISTRO</button></a>
+                <a href="/components/registerLogin/login/login.html"><button class="login">LOGIN</button></a>
+            </div>
+            <div class="burger"><i class='fa fa-bars white-color'></i></div>
+        </div>
+    <!--aca va la imagen de fondo y el boton de evento-->
+        <div class="botonCrearEvento"><a href="/components/product/createProduct/newEvent.html"><button>Crear Mi Evento</button></a></div>
+    </header>
+<!--aca empieza el main--> 
+    <main>
+        <!--aca van los FILTROS--> 
+        <div class="filters">
+            <div class="categories">
+                <a href="#"><img src="/assets/img/icons/grid.png" alt="settings"></a>
+                <a href="#"><img src="/assets/img/icons/infantil.png" alt="infantil"></a>
+                <a href="#"><img src="/assets/img/icons/gastro.png" alt="gastro"></a>
+                <a href="#"><img src="/assets/img/icons/biking.png" alt="deportes"></a>
+                <a href="#"><img src="/assets/img/icons/music.png" alt="musica"></a>
+
+            </div>
+            <div class="centerFilter">
+                <div><p>por nombre evento </p></div>
+                <div><p>lugar</p></div>
+                <div><p>fecha</p></div>
+                <div>
+                    <button><i class="fa fa-search"></i></button>
+                    <p> Limpiar </p> 
+                </div>
+            </div>
+            <div class="dayFilters">
+                <button>HOY</button>
+                <button>Por Día</button>
+            </div>
+        </div>
+
+        <!--aca van las CARDS . Se configura en index.js --> 
+        <section>
+            <div id="cards">                
+            </div>
+        </section>
+    </main>
+
+<!--aca empieza el Footer--> 
+    <footer>
+        <p>2023 PARQUE    .  Privacy   .   Terms</p>
+        <div class="redesSociales">
+            <a href="#"><img src="/assets/img/icons/instagram.png" alt="instagram">
+            </a>
+            <a href="#"><img src="/assets/img/icons/facebook.png" alt="facebook">
+            </a>
+            <a href="#"><img src="/assets/img/icons/gorjeo.png" alt="tweeter">
+            </a>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+
+</body>
+</html>
