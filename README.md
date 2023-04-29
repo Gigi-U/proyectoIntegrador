@@ -18,6 +18,6 @@ Cuenta con:
 
 Integrantes:
 Pablo Segura | github: pumkyxxx
-Carla Villalba | github: 
-Luciana Zalazar | github: Carvillalba
+Carla Villalba | github: Carvillalba
+Luciana Zalazar | github: 
 S. Gisela Urriza y Spreafichi | github: Gigi-U
