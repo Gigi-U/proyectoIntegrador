@@ -5,6 +5,7 @@ PÁGINA DESPLEGADA: https://parque.netlify.app/
 
 UI -https://www.figma.com/file/dCXR5GLsK6umzCkGRJ6OCV/PARQUE--CodoACodo?node-id=0%3A1&t=LoRiyUGbPAltgfdU-1 
 
+Trello: https://trello.com/b/7EfwuAZP/parque
 
 Sitio Web Responsive para encontrar y crear eventos al aire libre.
 Cuenta con:
