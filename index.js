@@ -1,59 +1,59 @@
 const listadoEventos = [
   {
     img: "/assets/img/eventImages/music01.png",
-    titulo: "Música a Cielo Abierto",
-    fecha:"02/03/2024",
-    lugar:"Santa Fe",
-    descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
-    categoria:"music",
-    dia:"sabado"
+    title: "Música a Cielo Abierto",
+    date:"02/03/2024",
+    location:"Santa Fe",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    category:"music",
+    day:"sabado"
 
   },
   {
     img: "/assets/img/eventImages/kids01.png",
-    titulo: "Festival de Verano",
-    fecha:"02/03/2024",
-    lugar:"GBA",
-    descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
-    categoria:"kids",
-    dia:"sabado"
+    title: "Festival de Verano",
+    date:"02/03/2024",
+    location:"GBA",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    category:"kids",
+    day:"sabado"
 
   },
   {
     img: "/assets/img/eventImages/gastro01.png",
-    titulo: "Picnic Primaveral",
-    fecha:"02/03/2024",
-    lugar:"CABA",
-    descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
-    categoria:"gastro",
-    dia:"sabado"
+    title: "Picnic Primaveral",
+    date:"02/03/2024",
+    location:"CABA",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    category:"gastro",
+    day:"sabado"
   },
   {
     img: "/assets/img/eventImages/amusement01.png",
-    titulo: "Parque de Diversiones",
-    fecha:"02/03/2024",
-    lugar:"Córdoba",
-    descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
-    categoria:"amusement",
-    dia:"sabado"
+    title: "Parque de Diversiones",
+    date:"02/03/2024",
+    location:"Córdoba",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    category:"amusement",
+    day:"sabado"
 
   },
   {
     img: "/assets/img/eventImages/sports01.png",
-    titulo: "Media Maratón",
-    fecha:"02/03/2024",
-    lugar:"Tandil",
-    descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
-    categoria:"sports",
-    dia:"sabado"
+    title: "Media Maratón",
+    date:"02/03/2024",
+    location:"Tandil",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+    category:"sports",
+    day:"sabado"
 
   }  
 ]; 
 
 const cards = document.getElementById('cards'); 
 
-
-// funcion para mezclar los objetos del array listadoEventos y hacer las Cards Aleatorias
+//& RENDERIZADO DE CARDS ALEATORIOS
+// Funcion para hacer las cards aleatorias
 function shuffleObject(object) {
   for (let i = object.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -61,36 +61,36 @@ function shuffleObject(object) {
   }
   return object;
 }
-
-// funcion para guardar 4 cards del array listadoEventos y guardarlas en el array cuatroCards
+// funcion para que solo se muestren 4 cards en la página inicio
 const cuatroCards=[];
-
 function randomElements() {
   newObj= shuffleObject([...listadoEventos]).slice(0, 4)
   for (let i = 0; i < newObj.length; i++) {
     cuatroCards.push(newObj[i])        
-}
+  }
   return cuatroCards
 }
 randomElements();
 
-// Función para el renderizado de las 4 cards aleatorias de la página inicio
+// Función para el renderizado de las 4 cards 
 function recorrerListadoYRenderizarTarjetas() {    
   cards.innerHTML = ''
-  cuatroCards.forEach( evento => {
+  cuatroCards.forEach( event => {
       cards.innerHTML += `
         <div>
-          <a href="/components/product/details.html"><img src = ${evento.img} alt = "evento"><a>
-          <p>${evento.fecha} | ${evento.lugar} </p>
+          <a href="/components/product/details.html"><img src = ${event.img} alt = "evento"><a>
+          <p>${event.date} | ${event.location} </p>
           <p>
-            <b>${evento.titulo}</b><br> 
-             ${evento.descripcion}
+            <b>${event.title}</b><br> 
+             ${event.description}
           </p>
         </div>
       `;
     });  
 };
 recorrerListadoYRenderizarTarjetas();  
+
+//& FILTROS
 
 // función para ver TODAS las Cards cuando: se clickea en Todo | se clickea en niños | se clickea en gastro | se clickea en deportes | se clickea en musica
 

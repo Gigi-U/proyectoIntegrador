@@ -32,11 +32,11 @@
         <!--aca van los FILTROS--> 
         <div class="filters">
             <div class="categories">
-                <a href="#" id="todo"><img src="/assets/img/icons/grid.png" alt="verTodo"></a>
-                <a href="#" id="kids"><img src="/assets/img/icons/infantil.png" alt="infantil"></a>
-                <a href="#" id="gastro"><img src="/assets/img/icons/gastro.png" alt="gastro"></a>
-                <a href="#" id="sports"><img src="/assets/img/icons/biking.png" alt="deportes"></a>
-                <a href="#" id="music"><img src="/assets/img/icons/music.png" alt="musica"></a>
+                <button class="btn category" id="filter-all"><img src="/assets/img/icons/grid.png"alt="all"></button>
+                <button class="btn filter-kids" id="filter-kids"><img src="/assets/img/icons/infantil.png" alt="infantil"></button>
+                <button class="btn category" id="filter-gastro"><img src="/assets/img/icons/gastro.png" alt="gastro"></button>
+                <button class="btn category" id="filter-sports"><img src="/assets/img/icons/biking.png" alt="deportes"></button>
+                <button class="btn category" id="filter-music"><img src="/assets/img/icons/music.png" alt="musica"></button>
 
             </div>
             <div class="centerFilter">
@@ -45,12 +45,12 @@
                 <div><p>fecha</p></div>
                 <div>
                     <button><i class="fa fa-search"></i></button>
-                    <p> Limpiar </p> 
+                    <button>Limpiar</button>
                 </div>
             </div>
             <div class="dayFilters">
-                <button>HOY</button>
-                <button>Por Día</button>
+                <button class="btn today" id="filter-today">HOY</button>
+                <button class="btn day" id="filter-day"></buttonid>Por Día</button>
             </div>
         </div>
 
@@ -73,7 +73,7 @@
             </a>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="probando.js"></script>
 
 </body>
 </html>
