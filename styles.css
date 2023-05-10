@@ -140,24 +140,27 @@ main{
     justify-content: center; 
     flex-direction: column;
     align-items: center;
-
     background-color: rgb(255, 255, 255);
     color:black;
     width: 100%;
 }
-.filters{
+.wrapper{
+    width:95%;
+    margin:0 auto;
+}
+
+.buttons{
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: space-between; 
     gap:50px    
 }
-
 /* filtro central*/
 .centerFilter{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     gap:15px;
     border-radius: 25px;
     background-color:#D8E450;
@@ -173,32 +176,50 @@ main{
     transition: box-shadow 0.5s;
 }
 .centerFilter div{
-    border-right:1px solid #5250C8;
     padding-right:15px;
     cursor: pointer;
+}
 
-}
-.centerFilter div:nth-child(4n){
-    display: inline-flex;
-    justify-content: space-between;
-
-    width: 25%;
-    border-right:none;
-    padding-right:none;
-}
-.centerFilter p{
-    color:#5250C8;
-    font-weight: bold;
-}
-.centerFilter div button {
+.centerFilter button {
     background-color: #D8E450;
     border: none;
     color:#5250C8;
     font-weight: bolder;
+}
+
+.centerFilter input{
+    background-color: transparent;
+    width: 70%;
+    padding: 1em 0.6em;
+    border-top:none ;
+    border-right:none ;
+    border-left:none;
+    border-width: 0.1em;
+    color:#5250C8;
 
 }
-/* categorías temáticas y filtros Hoy y "Por día"*/
+.centerFilter input:focus{
+    border-bottom-color:#6759ff ;
+    color:#5250C8;
 
+}
+.centerFilter #search{
+    background-color: #D8E450;
+    border: none;
+    font-weight: bolder;
+}
+.centerFilter  i{
+    color:#5250C8;
+    cursor: pointer;
+    font-size: 25px;
+
+}
+.btn{
+    cursor: pointer;
+}
+.active{
+    color:#101014;
+}
 .categories{
     display: flex;
     flex-direction: row;
@@ -219,17 +240,17 @@ main{
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
-.categories button{
-    background-color: white;
-    border-radius: 70px;
+.categories .btn{
+    background-color: rgb(255, 254, 254);
+    border-radius: 50px;
     border:none;
     width: 43px;
     cursor: pointer;
-
 }
-.categories img{
+.categories .btn img{
     background-color: none;
-    width:23px
+    width:23px;
+    height:32px
 }
 .dayFilters{
     display: flex;
@@ -239,7 +260,7 @@ main{
     gap:50px;    
     margin-top:15px;
 }
-.dayFilters button{
+.dayFilters .btn{
     height: 30px;
     width: 80px;
     border-radius: 15px;
@@ -251,76 +272,139 @@ main{
     color:rgb(145, 144, 144);
     transition: box-shadow 0.5s;
 }
-.dayFilters button:hover {
+.dayFilters .btn:hover {
     cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
-
-
-/*tarjetas de productos */
-#cards{
-    display: flex;
-    gap : 10px;
-    align-items: center;
-    margin: 20px 0px 20px 0px;
-    cursor: pointer;
-    
+.btn img{
+    max-width: 100%;
+    object-fit: contain;
 }
-#cards div{
-    justify-content:space-evenly; 
+/*TARJETAS DE PRODUCTOS*/
+/* A) tarjetas de productos DIV main-events*/
+#main-events{
+    display:flex;
+    gap:2em;
+    padding: 2em 0;
+    border-radius: 5px;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+    align-items: center;    
+}
+#main-events div{
     color:black;
-    height: 253px;
-    width:260px;
+    height: 270px;
+    width:270px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     text-align: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: box-shadow 0.5s;
 }
-#cards div p{
+#main-events div p{
     font-size: 12px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif;
 }
 
-#cards div:hover {
+
+#main-events div:hover {
     cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
   
-#cards img{
+#main-events img{
     display: block;
-
     max-width: 100%;
     height: auto;
     border-top-right-radius:25px;
     border-top-left-radius:25px;
+    object-fit: contain;
 }
 
+/*B) Tarjetas de productos DIV events*/
+#events{
+    display:grid;
+    grid-template-columns: 270px 270px 270px 270px;
+    gap: 2em;
+    padding: 2em 0;
+    border-radius: 5px;
+    margin: 0px 0px 20px 0px;
+    cursor: pointer;
+    align-items: center;
+}
+#events div:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+}
+#events img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-top-right-radius:25px;
+    border-top-left-radius:25px;
+    object-fit: contain;
+}
+.container{
+    justify-content:space-evenly; 
+    color:rgb(12, 12, 12);
+    text-align: center;
+    border-bottom-right-radius:25px;
+    border-bottom-left-radius:25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: box-shadow 0.5s;
+    padding-bottom: 20px;    
+}
+#events div p{
+    font-size: 10px;
+    font-family: sans-serif;
+}
+.date{
+    display:inline;
+}
+.day{
+    display:none
+
+}
+.location{
+    display:inline
+}
+.category{
+    display:none
+}
+.event-name{
+    font-weight: 400;
+    padding:5px;
+    font-size: 15px;
+}
+.description{
+    padding-bottom:10px;
+}
+.hide{
+    display:none
+}
 /*FOOTER*/
 footer{
     display: flex;
     justify-content:space-between;
-
     padding:20px 0px 0px 0px;
-
 }
 footer p{
     padding-left: 20px;
-
 }
 .redesSociales{
     display: flex;
     justify-content: space-between; 
     gap:50px;
-
     padding-right: 20px;
-
 }
 .redesSociales a img{
     width:25px;
 }
+
+/* falta terminar*/
 @media only screen and (max-width: 800px) {
 
     header {
@@ -378,7 +462,11 @@ footer p{
     .categories{
         flex-direction: row;
     }
-    #cards{
+    #main-events{
+        display: flex;
+        flex-direction:column;
+    }
+    #events{
         display: flex;
         flex-direction:column;
     }
@@ -388,7 +476,7 @@ footer p{
     }
 
 }
-
+/* falta terminar*/
 @media only screen and (max-width: 500px) {
 
     header {
@@ -466,7 +554,11 @@ footer p{
         gap: 15px;
     }
 
-    #cards{
+    #main-events{
+        display: flex;
+        flex-direction: column;
+    }
+    #events{
         display: flex;
         flex-direction: column;
     }
