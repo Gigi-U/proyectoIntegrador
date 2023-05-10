@@ -200,6 +200,7 @@ filterEventsByCategory(value);
 document.getElementById("search").addEventListener("click", () => {
 const searchInput = document.getElementById("search-input").value;
 filterEventsByName(searchInput);
+fourCards.remove()
 });
 
 // Renderiza las tarjetas en un contenedor
