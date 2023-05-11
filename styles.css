@@ -212,7 +212,6 @@ main{
     color:#5250C8;
     cursor: pointer;
     font-size: 25px;
-
 }
 .btn{
     cursor: pointer;
@@ -423,33 +422,22 @@ footer p{
     .cabecera .logo a img {
         width:40px;
     }
-    .registroLogin a button{
-        display:none;
-    }
-    .burger {
-        width: 100%;
-        display:inline;
-        padding-left:430px
-    }
-    .botonCrearEvento{
-        display: flex;
-        align-items:center;
-
-    }
     .botonCrearEvento a button{
         font-size: 8px;
-        margin:80px 340px 0px 0px;
+        margin:80px 75px 0px 0px;
         height:30px;
         width: 90px;
-    }
-    .filters{
+    }  
+    .buttons{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding-top: 0%;
-        gap: 50px;
-    }
+        gap: 30px;
+    }    
     .centerFilter  {
-        width: 530px;
+        width: 800px;
+        margin-top:-20px;
+
     }
     .centerFilter div p{
         font-size: 18px;            
@@ -464,15 +452,17 @@ footer p{
     }
     #main-events{
         display: flex;
-        flex-direction:column;
+        flex-wrap: wrap;
+        align-self: center;
     }
+
     #events{
-        display: flex;
-        flex-direction:column;
+        display:grid;
+        grid-template-columns: 270px 270px;
     }
     .footer{
         display: flex;
-        padding:0px 0px 0px 0px;
+        flex-wrap: wrap;
     }
 
 }
@@ -524,34 +514,40 @@ footer p{
         box-shadow: none;
         transition: box-shadow 0.5s;
     }
-    .filters{
+    .buttons{
         display: flex;
         flex-direction: column;
-        padding-top: 0%;
-        gap: 50px;
-
-    }
+    }    
     .centerFilter{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 290px;
-        height: fit-content;
+        height: 25px;
         padding-top: 20px;
         padding-bottom: 20px;
-        border:0px none ;
+        border:0px none;
     }
+
     .centerFilter div{
         border-right: none;
         border:2px solid  #D8E450;
     }
+    .search{
+        font-size: 18px;
+    }
+    .search-input{
+        height: 15px;
+    }
     .dayFilters{
         gap: 35px;
-        margin-bottom:20px
+        width: 200px;
+        margin-bottom:10px
     }
     .categories{
         flex-direction: row;
         width: 280px;
         gap: 15px;
+        margin: 20px 0px 20px 0px;
     }
 
     #main-events{
