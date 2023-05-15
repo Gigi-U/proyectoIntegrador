@@ -339,13 +339,16 @@ main{
 }
 /*para el div de los filtros*/
 #events{
-    display:flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
     gap:2em;
     padding: 2em 0;
     border-radius: 5px;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
-    align-items: center;    
+    align-items: center;        
 }
 #events div{
     color:black;
@@ -357,6 +360,7 @@ main{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: box-shadow 0.5s;
 }
+
 #events div:hover {
     cursor: pointer;
     box-shadow: none;
