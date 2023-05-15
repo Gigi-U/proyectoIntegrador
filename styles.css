@@ -281,7 +281,38 @@ main{
     object-fit: contain;
 }
 /*TARJETAS DE PRODUCTOS*/
-/* A) tarjetas de productos DIV main-events*/
+/*para los dos divs*/
+.img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-top-right-radius:25px;
+    border-top-left-radius:25px;
+    object-fit: contain;
+}
+.date{
+    font-size: 11px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:inline;
+}
+.location{
+    font-size: 11px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:inline;
+    margin-left:10px
+}
+.event-name{
+    font-weight: 400;
+    padding:5px;
+    font-size: 15px;
+}
+.event-info{
+    font-size: 11px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*para el div de inicio*/
+
 #main-events{
     display:flex;
     gap:2em;
@@ -301,89 +332,47 @@ main{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: box-shadow 0.5s;
 }
-#main-events div p{
-    font-size: 12px;
-    font-family: sans-serif;
-}
-
-
 #main-events div:hover {
     cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
-  
-#main-events img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-top-right-radius:25px;
-    border-top-left-radius:25px;
-    object-fit: contain;
-}
-
-/*B) Tarjetas de productos DIV events*/
+/*para el div de los filtros*/
 #events{
-    display:grid;
-    grid-template-columns: 270px 270px 270px 270px;
-    gap: 2em;
+    display:flex;
+    gap:2em;
     padding: 2em 0;
     border-radius: 5px;
     margin: 0px 0px 20px 0px;
     cursor: pointer;
-    align-items: center;
+    align-items: center;    
+}
+#events div{
+    color:black;
+    height: 270px;
+    width:270px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: box-shadow 0.5s;
 }
 #events div:hover {
     cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
-#events img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-top-right-radius:25px;
-    border-top-left-radius:25px;
-    object-fit: contain;
-}
-.container{
-    justify-content:space-evenly; 
-    color:rgb(12, 12, 12);
-    text-align: center;
-    border-bottom-right-radius:25px;
-    border-bottom-left-radius:25px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: box-shadow 0.5s;
-    padding-bottom: 20px;    
-}
-#events div p{
-    font-size: 10px;
-    font-family: sans-serif;
-}
-.date{
-    display:inline;
-}
+
 .day{
     display:none
-
-}
-.location{
-    display:inline
 }
 .category{
     display:none
 }
-.event-name{
-    font-weight: 400;
-    padding:5px;
-    font-size: 15px;
-}
-.description{
-    padding-bottom:10px;
-}
 .hide{
     display:none
 }
+
 /*FOOTER*/
 footer{
     display: flex;
@@ -454,11 +443,15 @@ footer p{
         display: flex;
         flex-wrap: wrap;
         align-self: center;
+        margin-left:5em
     }
 
     #events{
-        display:grid;
-        grid-template-columns: 270px 270px;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+        margin-left:5em
+
     }
     .footer{
         display: flex;
@@ -553,10 +546,14 @@ footer p{
     #main-events{
         display: flex;
         flex-direction: column;
+        margin-left:0
+
     }
     #events{
         display: flex;
         flex-direction: column;
+        margin-left:0
+
     }
     .footer{
         display: flex;
