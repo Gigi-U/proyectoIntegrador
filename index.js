@@ -2,7 +2,7 @@ const listadoEventos = {
   data: [
     {
       img: "/assets/img/eventImages/music01.png",
-      eventName: "Musica a Cielo Abierto",
+      eventName: "MUSICA A CIELO ABIERTO",
       date: "02/06/2023",
       location: "Santa Fe",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis harum tempora provident facere.",
@@ -11,7 +11,7 @@ const listadoEventos = {
     },
     {
       img: "/assets/img/eventImages/kids01.png",
-      eventName: "Festival de Verano",
+      eventName: "FESTIVAL DE VERANO",
       date: "02/03/2024",
       location: "GBA",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis harum tempora provident facere.",
@@ -20,7 +20,7 @@ const listadoEventos = {
     },
     {
       img: "/assets/img/eventImages/gastro01.png",
-      eventName: "Picnic Primaveral",
+      eventName: "PICNIC PRIMAVERAL",
       date: "02/12/2023",
       location: "CABA",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis harum tempora provident facere.",
@@ -29,7 +29,7 @@ const listadoEventos = {
     },
     {
       img: "/assets/img/eventImages/amusement01.png",
-      eventName: "Parque de Diversiones",
+      eventName: "PARQUE DE DIVERSIONES",
       date: "02/10/2023",
       location: "Cordoba",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis harum tempora provident facere.",
@@ -38,7 +38,7 @@ const listadoEventos = {
     },
     {
       img: "/assets/img/eventImages/sports01.png",
-      eventName: "Media Maraton",
+      eventName: "MEDIA MARATON",
       date: "02/03/2024",
       location: "Tandil",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis harum tempora provident facere.",
@@ -47,6 +47,8 @@ const listadoEventos = {
     }
   ]
 };
+
+// ---------------DIV MAIN-EVENTS-------------------------------------
 const fourCards = document.getElementById('main-events'); 
 // Función para hacer el div de las cards aleatorias
 function shuffleObject(object) {
@@ -72,28 +74,85 @@ function recorrerListadoYRenderizarTarjetas() {
   cuatroCards.forEach( event => {
       fourCards.innerHTML += `
           <div>
-            <a href="/components/product/details.html"><img src = ${event.img} alt = "evento"><a>
-            <p>${event.date} ${event.location}</p>
-            <p>
-              <h5>${event.eventName}</h5><br>
-              <p>${event.description}</p>
-            </p>
+            <a href="/components/product/details.html"><img src = ${event.img} alt = "evento" class="img"></a>
+            <p class="date">${event.date}</p><p class="location">${event.location}</p>
+            <h2 class="event-name">${event.eventName}</h2>
+            <p class="event-info">${event.description}</p>            
           </div>
         `;
   });          
 };
 recorrerListadoYRenderizarTarjetas(); 
 
-// el div de los filtros:
-
+// ---------------DIV EVENTS -------------------------------------
 const eventsContainer = document.getElementById("events");
-  // Crea y agrega las tarjetas al contenedor de eventos
+
+// recorre la data del Listado de eventos y se prepara para "tirar" la info en las cards
 listadoEventos.data.forEach(event => {
   const card = createEventCard(event);
   eventsContainer.appendChild(card);
 });
 
-// Filtra los eventos por categoría
+
+// Crea el "molde" de las cards
+function createEventCard(event) {
+  const card = document.createElement("div");
+  card.classList.add("card", event.category, "hide");
+
+  const link = document.createElement("a");
+  link.setAttribute("href", "/components/product/details.html");
+
+  const image = document.createElement("img");
+  image.setAttribute("src", event.img);
+  image.classList.add("img");
+  link.appendChild(image);
+  card.appendChild(link);
+
+  const date = document.createElement("p");
+  date.classList.add("date");
+  date.innerText = event.date;
+  card.appendChild(date);
+
+  const location = document.createElement("p");
+  location.classList.add("location");
+  location.innerText = event.location;
+  card.appendChild(location);
+
+  const name = document.createElement("h2");
+  name.classList.add("event-name");
+  name.innerText = event.eventName;
+  card.appendChild(name);
+
+  const day = document.createElement("p");
+  day.classList.add("day");
+  day.innerText = event.day;
+  card.appendChild(day);
+
+  const category = document.createElement("h5");
+  category.classList.add("category");
+  category.innerText = event.category;
+  card.appendChild(category);
+
+  const info = document.createElement("p");
+  info.classList.add("event-info");
+  info.innerText = event.description;
+  card.appendChild(info);
+
+return card;
+}
+
+// Renderiza las tarjetas en un contenedor
+function renderCards(container, cards) {
+  container.innerHTML = "";
+  
+  cards.forEach(card => {
+    const eventCard = createEventCard(card);
+    container.appendChild(eventCard);
+  });
+  }
+  
+// ---------------FILTROS-------------------------------------
+// Filtra los eventos por categoría y elimina el div main-events
 function filterEventsByCategory(category) {
   const cards = document.querySelectorAll(".card");
 
@@ -110,109 +169,39 @@ function filterEventsByCategory(category) {
   });
 }
 
-// Filtra los eventos por palabra clave en el nombre
+function filterProduct(value) {
+  const buttons = document.querySelectorAll(".btn");
+  buttons.forEach(button => {
+    if (value.toUpperCase() === button.innerText.toUpperCase()) {
+      button.classList.add("active");
+    }else {
+      button.classList.remove("active");
+    }
+  });
+  filterEventsByCategory(value);
+}
+
+// Filtro de búsqueda por nombre
 function filterEventsByName(keyword) {
   const cards = document.querySelectorAll(".card");
 
   cards.forEach(card => {
-    const eventName = card.querySelector(".event-name").innerText.toUpperCase();
-
-    if (eventName.includes(keyword.toUpperCase())) {
+    const eventName = card.querySelector(".event-name").innerText;
+    if (eventName.includes(keyword.toUpperCase()) || eventName.includes(keyword) ) {
       card.classList.remove("hide");
     } else {
       card.classList.add("hide");
     }
   });
 }
-
-// Crea una tarjeta de evento
-function createEventCard(event) {
-  const card = document.createElement("div");
-  card.classList.add("card", event.category, "hide");
-
-  const imgContainer = document.createElement("div");
-  imgContainer.classList.add("image-container");
-
-  const link = document.createElement("a");
-  link.setAttribute("href", "/components/product/details.html");
-
-  const image = document.createElement("img");
-  image.setAttribute("src", event.img);
-  link.appendChild(image);
-  imgContainer.appendChild(link);
-  card.appendChild(imgContainer);
-
-  const container = document.createElement("div");
-  container.classList.add("container");
-
-// ... código anterior ...
-
-const date = document.createElement("p");
-date.classList.add("date");
-date.innerText = event.date;
-container.appendChild(date);
-
-const location = document.createElement("p");
-location.classList.add("location");
-location.innerText = event.location;
-container.appendChild(location);
-
-const name = document.createElement("h2");
-name.classList.add("event-name");
-name.innerText = event.eventName.toUpperCase();
-container.appendChild(name);
-
-const day = document.createElement("p");
-day.classList.add("day");
-day.innerText = event.day;
-container.appendChild(day);
-
-const category = document.createElement("h5");
-category.classList.add("category");
-category.innerText = event.category;
-container.appendChild(category);
-
-const info = document.createElement("p");
-info.classList.add("event-info");
-info.innerText = event.description.toUpperCase();
-container.appendChild(info);
-
-card.appendChild(container);
-
-return card;
-}
-
-// Filtro de categorías
-function filterProduct(value) {
-const buttons = document.querySelectorAll(".btn");
-buttons.forEach(button => {
-  if (value.toUpperCase() === button.innerText.toUpperCase()) {
-    button.classList.add("active");
-  } else {
-    button.classList.remove("active");
-  }
-});
-
-filterEventsByCategory(value);
-}
-
-// Filtro de búsqueda por nombre
+// botón lupa y elimina el DIV main-events
 document.getElementById("search").addEventListener("click", () => {
 const searchInput = document.getElementById("search-input").value;
 filterEventsByName(searchInput);
 fourCards.remove()
 });
 
-// Renderiza las tarjetas en un contenedor
-function renderCards(container, cards) {
-container.innerHTML = "";
-
-cards.forEach(card => {
-  const eventCard = createEventCard(card);
-  container.appendChild(eventCard);
-});
-}
-
+// indica que al entrar a la página y/o refrescarla, vamos a ver los 4 divs aleatorios de main-events
 window.onload = ()=>{       
   recorrerListadoYRenderizarTarjetas()
 }
