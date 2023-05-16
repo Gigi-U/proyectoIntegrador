@@ -1,7 +1,7 @@
 
 *{
     margin:0px;
-    /*border:1px solid red */
+    /*border:1px solid red*/
 }
 
 /*HEADER*/
@@ -12,7 +12,7 @@ header{
     background-size: 100%;
     background-image: url("/assets/img/banner.png");
     background-repeat: no-repeat;
-    height:300px;
+    height:280px;
     width: 100%;
 }
 
@@ -21,7 +21,6 @@ header .cabecera{
     justify-content: space-between;
     align-items: center; 
     position: fixed;
-
     height: 25px; 
     width:100%;
     background-color: rgba(255, 255, 255, 0.25); 
@@ -32,28 +31,24 @@ header .cabecera{
     transition: box-shadow 0.5s;
 }
 .cabecera:hover {
-    cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
 header .cabecera .logo{ 
     display: flex;
     justify-content:flex-start;
-    align-items: center; 
-    
+    align-items: center;     
     height: 25px; 
     width:100%;
     font-family: fantasy;
     font-size: 23px;
     color:rgb(255, 255, 255);
     padding: 20px 20px 20px 20px;
-
 }
  
 header .cabecera a img{ 
     width: 50px;
     padding-right:20px;
-
 } 
 header .cabecera a {
     text-decoration:none;
@@ -143,6 +138,7 @@ main{
     background-color: rgb(255, 255, 255);
     color:black;
     width: 100%;
+
 }
 .wrapper{
     width:95%;
@@ -312,14 +308,15 @@ main{
 }
 
 /*para el div de inicio*/
+section{
+    margin-bottom: 0px;
 
+}
 #main-events{
     display:flex;
     gap:2em;
-    padding: 2em 0;
+    padding: 1.2em 0em 0em 0em;
     border-radius: 5px;
-    margin: 0px 0px 20px 0px;
-    cursor: pointer;
     align-items: center;    
 }
 #main-events div{
@@ -342,12 +339,10 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
     gap:2em;
-    padding: 2em 0;
+    padding: 1.2em 0em 0em 0em;
     border-radius: 5px;
     margin: 0px 0px 20px 0px;
-    cursor: pointer;
     align-items: center;        
 }
 #events div{
@@ -381,7 +376,7 @@ main{
 footer{
     display: flex;
     justify-content:space-between;
-    padding:20px 0px 0px 0px;
+
 }
 footer p{
     padding-left: 20px;
@@ -405,12 +400,15 @@ footer p{
         padding:0px 0px 0px 0px;
         display: flex;
         justify-content: space-between; 
-        margin-bottom:20px
+        margin-bottom:20px;
+        width: 100%;
     }
     .cabecera{ 
         align-items: center; 
         position: fixed; 
-        font-size: 20px;     
+        font-size: 20px;  
+        width: 100%;
+   
     }
     .cabecera .logo a img {
         width:40px;
@@ -460,6 +458,7 @@ footer p{
     .footer{
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 5px;
     }
 
 }
