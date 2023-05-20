@@ -1,7 +1,7 @@
 
 *{
     margin:0px;
-    /*border:1px solid red */
+    /*border:1px solid red*/
 }
 
 /*HEADER*/
@@ -12,7 +12,7 @@ header{
     background-size: 100%;
     background-image: url("/assets/img/banner.png");
     background-repeat: no-repeat;
-    height:300px;
+    height:280px;
     width: 100%;
 }
 
@@ -21,7 +21,6 @@ header .cabecera{
     justify-content: space-between;
     align-items: center; 
     position: fixed;
-
     height: 25px; 
     width:100%;
     background-color: rgba(255, 255, 255, 0.25); 
@@ -32,28 +31,24 @@ header .cabecera{
     transition: box-shadow 0.5s;
 }
 .cabecera:hover {
-    cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
 header .cabecera .logo{ 
     display: flex;
     justify-content:flex-start;
-    align-items: center; 
-    
+    align-items: center;     
     height: 25px; 
     width:100%;
     font-family: fantasy;
     font-size: 23px;
     color:rgb(255, 255, 255);
     padding: 20px 20px 20px 20px;
-
 }
  
 header .cabecera a img{ 
     width: 50px;
     padding-right:20px;
-
 } 
 header .cabecera a {
     text-decoration:none;
@@ -103,11 +98,9 @@ header .cabecera .registroLogin .registro{
     transition: box-shadow 0.5s;
 }
  /* MENÚ HAMBURGUESA PARA CELULARES - con js incluimos los botones de registro y login + cerrar sesión*/
-.burger {
-    width: 100%;
+#menu-check, #menu {
     display:none;
 }
-
  /*BOTON DE CREAR EVENTO*/
  header .botonCrearEvento {
     display: flex;
@@ -140,25 +133,28 @@ main{
     justify-content: center; 
     flex-direction: column;
     align-items: center;
-
     background-color: rgb(255, 255, 255);
     color:black;
     width: 100%;
+
+}
+.wrapper{
+    width:95%;
+    margin:0 auto;
 }
 
-.filters{
+.buttons{
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: space-between; 
     gap:50px    
 }
-
 /* filtro central*/
 .centerFilter{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     gap:15px;
     border-radius: 25px;
     background-color:#D8E450;
@@ -174,38 +170,54 @@ main{
     transition: box-shadow 0.5s;
 }
 .centerFilter div{
-    border-right:1px solid #5250C8;
     padding-right:15px;
     cursor: pointer;
+}
 
-}
-.centerFilter div:nth-child(4n){
-    display: inline-flex;
-    justify-content: space-between;
-
-    width: 25%;
-    border-right:none;
-    padding-right:none;
-}
-.centerFilter p{
-    color:#5250C8;
-    font-weight: bold;
-}
-.centerFilter div button {
+.centerFilter button {
     background-color: #D8E450;
     border: none;
     color:#5250C8;
     font-weight: bolder;
+}
+
+.centerFilter input{
+    background-color: transparent;
+    width: 70%;
+    padding: 1em 0.6em;
+    border-top:none ;
+    border-right:none ;
+    border-left:none;
+    border-width: 0.1em;
+    color:#5250C8;
 
 }
-/* categorías temáticas y filtros Hoy y "Por día"*/
+.centerFilter input:focus{
+    border-bottom-color:#6759ff ;
+    color:#5250C8;
 
+}
+.centerFilter #search{
+    background-color: #D8E450;
+    border: none;
+    font-weight: bolder;
+}
+.centerFilter  i{
+    color:#5250C8;
+    cursor: pointer;
+    font-size: 25px;
+}
+.btn{
+    cursor: pointer;
+}
+.active{
+    color:#101014;
+}
 .categories{
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: space-between; 
-    gap:20px;
     margin-top:15px;
     opacity: 0.6;
     border:1px solid rgb(121, 112, 112);
@@ -218,14 +230,20 @@ main{
     transition: box-shadow 0.5s;
 }
 .categories:hover {
-    cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
-.categories img{
+.categories .btn{
+    background-color: rgb(255, 254, 254);
+    border-radius: 50px;
+    border:none;
+    width: 43px;
+    cursor: pointer;
+}
+.categories .btn img{
     background-color: none;
-    padding:10px;
-    width:23px
+    width:23px;
+    height:32px
 }
 .dayFilters{
     display: flex;
@@ -235,7 +253,7 @@ main{
     gap:50px;    
     margin-top:15px;
 }
-.dayFilters button{
+.dayFilters .btn{
     height: 30px;
     width: 80px;
     border-radius: 15px;
@@ -247,51 +265,109 @@ main{
     color:rgb(145, 144, 144);
     transition: box-shadow 0.5s;
 }
-.dayFilters button:hover {
+.dayFilters .btn:hover {
     cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
-
-
-/*tarjetas de productos */
-#cards{
-    display: flex;
-    gap : 10px;
-    align-items: center;
-    margin: 20px 0px 20px 0px;
-    cursor: pointer;
-    
+.btn img{
+    max-width: 100%;
+    object-fit: contain;
 }
-#cards div{
-    justify-content:space-evenly; 
+/*TARJETAS DE PRODUCTOS*/
+/*para los dos divs*/
+.img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-top-right-radius:25px;
+    border-top-left-radius:25px;
+    object-fit: contain;
+}
+.date{
+    font-size: 11px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:inline;
+}
+.location{
+    font-size: 11px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:inline;
+    margin-left:10px
+}
+.event-name{
+    font-weight: 400;
+    padding:5px;
+    font-size: 15px;
+}
+.event-info{
+    font-size: 11px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*para el div de inicio*/
+section{
+    margin-bottom: 0px;
+
+}
+#main-events{
+    display:flex;
+    gap:2em;
+    padding: 1.2em 0em 0em 0em;
+    border-radius: 5px;
+    align-items: center;    
+}
+#main-events div{
     color:black;
-    height: 253px;
-    width:260px;
+    height: 270px;
+    width:270px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     text-align: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: box-shadow 0.5s;
 }
-#cards div p{
-    font-size: 12px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#cards div:hover {
+#main-events div:hover {
     cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
-  
-#cards img{
-    display: block;
+/*para el div de los filtros*/
+#events{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:2em;
+    padding: 1.2em 0em 0em 0em;
+    border-radius: 5px;
+    margin: 0px 0px 20px 0px;
+    align-items: center;        
+}
+#events div{
+    color:black;
+    height: 270px;
+    width:270px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: box-shadow 0.5s;
+}
 
-    max-width: 100%;
-    height: auto;
-    border-top-right-radius:25px;
-    border-top-left-radius:25px;
+#events div:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+}
+
+.day{
+    display:none
+}
+.category{
+    display:none
+}
+.hide{
+    display:none
 }
 
 /*FOOTER*/
@@ -299,24 +375,21 @@ footer{
     display: flex;
     justify-content:space-between;
 
-    padding:20px 0px 0px 0px;
-
 }
 footer p{
     padding-left: 20px;
-
 }
 .redesSociales{
     display: flex;
     justify-content: space-between; 
     gap:50px;
-
     padding-right: 20px;
-
 }
 .redesSociales a img{
     width:25px;
 }
+
+/* falta terminar*/
 @media only screen and (max-width: 800px) {
 
     header {
@@ -325,48 +398,38 @@ footer p{
         padding:0px 0px 0px 0px;
         display: flex;
         justify-content: space-between; 
-        margin-bottom:20px
+        margin-bottom:20px;
+        width: 100%;
     }
     .cabecera{ 
         align-items: center; 
         position: fixed; 
-        font-size: 20px;     
+        font-size: 20px;  
+        width: 100%;
+   
     }
     .cabecera .logo a img {
         width:40px;
     }
-    .registroLogin a button{
-        display:none;
-    }
-    .burger {
-        width: 100%;
-        display:inline;
-        padding-left:430px
-    }
-    .botonCrearEvento{
-        display: flex;
-        align-items:center;
-
-    }
     .botonCrearEvento a button{
         font-size: 8px;
-        margin:80px 340px 0px 0px;
+        margin:80px 75px 0px 0px;
         height:30px;
         width: 90px;
-    }
-    .filters{
+    }  
+    .buttons{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding-top: 0%;
-        gap: 50px;
-    }
+        gap: 30px;
+    }    
     .centerFilter  {
-        width: 530px;
+        width: 800px;
+        margin-top:-20px;
+
     }
     .centerFilter div p{
-        font-size: 18px;
-              
-
+        font-size: 18px;            
     }
 
     .dayFilters{
@@ -376,17 +439,27 @@ footer p{
     .categories{
         flex-direction: row;
     }
-    #cards{
+    #main-events{
         display: flex;
-        flex-direction:column;
+        flex-wrap: wrap;
+        align-self: center;
+        margin-left:5em
+    }
+
+    #events{
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+        margin-left:5em
+
     }
     .footer{
         display: flex;
-        padding:0px 0px 0px 0px;
+        margin-bottom: 5px;
     }
 
 }
-
+/* falta terminar*/
 @media only screen and (max-width: 500px) {
 
     header {
@@ -405,25 +478,71 @@ footer p{
     .cabecera .logo a img {
         width:40px;
     }
-    .registroLogin a button{
+    /*Menú Hamburguesa*/
+
+    #menu-check:not(:checked)~ nav {
+        display:none;
+    }    
+    #menu-check:checked~ nav {
+        display:block;
+        padding-right: 25px;
+        padding-left: 28px;
+
+    }   
+    #menu{
+        display:block;
+        font-size: 1.2em;
+        color:white;
+        font-weight:bold;
+        position:absolute;
+        right: 3em;
+        z-index: 999;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    #menu:hover{
+        cursor: pointer;
+        box-shadow: none;
+        transition: box-shadow 0.5s;    
+    }
+    #menu-cerrar{
+        display:none;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #menu-check:checked ~ label #menu-abrir{
         display:none;
     }
-    .burger {
-        width: 100%;
+
+    #menu-check:checked ~ label #menu-cerrar{
         display:block;
-        padding-left:70px;
     }
+    header div.cabecera nav{
+        display: block;
+        top:0;
+        height: 13.5em;
+        background-color: rgba(0, 0, 0, 0.784);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    header nav .login{
+        margin-top: 1.8em;
+        margin-right: 2.5em;
+
+    }
+    header nav .registro{
+        margin-top: 10em;
+        margin-right: 2.5em;
+    }
+    /*--------------hasta acá--------------*/
     .botonCrearEvento{
         display: flex;
         align-items:center;
-
     }
     .botonCrearEvento a button{
-        font-size: 8px;
+        font-size: 12px;
         margin:70px 150px 0px 0px;
-        height:30px;
-        width: 90px;
-        margin:115px 150px 0px 0px;
+        height:40px;
+        width: 120px;
+        margin:115px 140px 0px 0px;
         border-color:#E9207E ;
         background-color: #E9207E;  
         box-shadow: rgba(79, 6, 45, 0.35) 0px 5px 15px;  
@@ -434,43 +553,65 @@ footer p{
         box-shadow: none;
         transition: box-shadow 0.5s;
     }
-    .filters{
+    .buttons{
         display: flex;
         flex-direction: column;
-        padding-top: 0%;
-        gap: 50px;
-
-    }
+    }    
     .centerFilter{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 290px;
-        height: fit-content;
+        height: 25px;
         padding-top: 20px;
         padding-bottom: 20px;
-        border:0px none ;
+        border:0px none;
     }
+
     .centerFilter div{
         border-right: none;
         border:2px solid  #D8E450;
     }
+    .search{
+        font-size: 18px;
+    }
+    .search-input{
+        height: 15px;
+    }
     .dayFilters{
         gap: 35px;
-        margin-bottom:20px
+        width: 200px;
+        margin-bottom:10px
     }
     .categories{
         flex-direction: row;
         width: 280px;
         gap: 15px;
+        margin: 20px 0px 20px 0px;
     }
 
-    #cards{
+    #main-events{
         display: flex;
         flex-direction: column;
+        margin-left:0
+
+    }
+    #events{
+        display: flex;
+        flex-direction: column;
+        margin-left:0
+
     }
     .footer{
         display: flex;
         padding:0px;
     }
-
+    .redesSociales{
+        display: flex;
+        justify-content: space-between; 
+        gap:20px;
+        padding-right: 20px;
+    }
+    .redesSociales a img{
+        width:25px;
+    }
 }

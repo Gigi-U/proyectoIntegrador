@@ -10,70 +10,51 @@
     <title>PARQUE</title>
 </head>
 <body>
-<!--aca empieza el HEADER--> 
-    <!--aca empieza la Cabecera transparente--> 
-    <header>
-        <div class="cabecera">
-            <div class="logo">        
-                <a href="#"><img src="/assets/img/logo/camping.png" alt="instagram"></a>
-                <a href="#"><p>PARQUE</p></a>
-            </div>
-            <div class="registroLogin">            
-                <a href="/components/registerLogin/register/register.html"><button class="registro">REGISTRO</button></a>
-                <a href="/components/registerLogin/login/login.html"><button class="login">LOGIN</button></a>
-            </div>
-            <div class="burger"><i class='fa fa-bars white-color'></i></div>
-        </div>
-    <!--aca va la imagen de fondo y el boton de evento-->
+<!--aca empieza el HEADER q lleva 2 divs y 1 imagen de fondo--> 
+    <header>        
+        <!--aca va la Cabecera transparente-->
+        <div class="cabecera"></div>
+        <!--aca va el boton de evento-->
         <div class="botonCrearEvento"><a href="/components/product/createProduct/newEvent.html"><button>Crear Mi Evento</button></a></div>
     </header>
 <!--aca empieza el main--> 
     <main>
         <!--aca van los FILTROS--> 
-        <div class="filters">
-            <div class="categories">
-                <a href="#"><img src="/assets/img/icons/grid.png" alt="settings"></a>
-                <a href="#"><img src="/assets/img/icons/infantil.png" alt="infantil"></a>
-                <a href="#"><img src="/assets/img/icons/gastro.png" alt="gastro"></a>
-                <a href="#"><img src="/assets/img/icons/biking.png" alt="deportes"></a>
-                <a href="#"><img src="/assets/img/icons/music.png" alt="musica"></a>
-
-            </div>
-            <div class="centerFilter">
-                <div><p>por nombre evento </p></div>
-                <div><p>lugar</p></div>
-                <div><p>fecha</p></div>
-                <div>
-                    <button><i class="fa fa-search"></i></button>
-                    <p> Limpiar </p> 
+        <div class="wrapper">
+            <div class="buttons">
+                <div class="categories">                
+                    <button class="btn"  onclick="filterProduct('all')" ><img src="/assets/img/icons/grid.png"alt="all"></button>
+                    <button class="btn"  onclick="filterProduct('Niños')"><img src="/assets/img/icons/infantil.png" alt="kids"></button>
+                    <button class="btn"  onclick="filterProduct('Gastro')"><img src="/assets/img/icons/gastro.png" alt="gastro"></button>
+                    <button class="btn"  onclick="filterProduct('Deportes')"><img src="/assets/img/icons/biking.png" alt="sports"></button>
+                    <button class="btn"  onclick="filterProduct('Musica')"><img src="/assets/img/icons/music.png" alt="music"></button>
                 </div>
-            </div>
-            <div class="dayFilters">
-                <button>HOY</button>
-                <button>Por Día</button>
-            </div>
-        </div>
+            
+                <div class="centerFilter"><!-- ya tiene por nombre de evento  falta el resto-->
+                        <input type="search" id="search-input" placeholder="Busca por palabra clave...">
+                        <button id="search"><i class="fa fa-search"></i></button>
+                </div>
+            
+                <div class="dayFilters"> <!--falta-->
+                    <button class="btn" onclick="filterProduct('today')">HOY</button>
+                    <button class="btn" onclick="filterProduct('day')">Por Día</button>
+                </div>
 
-        <!--aca van las CARDS . Se configura en index.js --> 
-        <section>
-            <div id="cards">                
             </div>
-        </section>
+            <!--aca van las CARDS. en el Div onLoadEvents vemos las 1ras 4 (aleatorias) en el de abajo se veran las de los filtros. Se configura en index.js --> 
+            <section>
+                <div id="main-events" ></div>           
+                <div id="events"></div>                                    
+            </section>
+        </div>
     </main>
 
 <!--aca empieza el Footer--> 
-    <footer>
-        <p>2023 PARQUE    .  Privacy   .   Terms</p>
-        <div class="redesSociales">
-            <a href="#"><img src="/assets/img/icons/instagram.png" alt="instagram">
-            </a>
-            <a href="#"><img src="/assets/img/icons/facebook.png" alt="facebook">
-            </a>
-            <a href="#"><img src="/assets/img/icons/gorjeo.png" alt="tweeter">
-            </a>
-        </div>
-    </footer>
-    <script src="index.js"></script>
+    <footer class="footer"></footer>
+
+    <script src="/components/cards/cards.js"></script>
+    <script src="/commons/header/header.js"></script>
+    <script src="/commons/footer/footer.js"></script>
 
 </body>
 </html>

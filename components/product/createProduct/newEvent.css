@@ -1,0 +1,9 @@
+header{
+    background-color:#D8E450;
+    background-image:none;
+    height:65px;
+}
+/* para poder acceder al formulario la persona debe estar previamente logueada. esto implica que no necesitará los botones estando en la pagina del formulario. lor lo mismo los quitamos*/
+header .cabecera .registroLogin{ 
+    display:none
+}
