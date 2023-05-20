@@ -7,3 +7,175 @@ header{
 header .cabecera .registroLogin{ 
     display:none
 }
+*{
+    margin:0px;
+    border-radius: 10px;
+}
+p{ color:violet;}
+h1{color: #E9207E;
+background: aqua;
+
+    border-left-style: solid;
+    border-left-width: 200px;
+    border-right-width: 200px;
+    border-right-style: solid;
+    height: max-content
+}
+button{
+    width: 80px; ;
+    color: aliceblue;
+    background-color: #E9207E;
+    padding: 2px; ;
+    margin: 2px;
+    border: radius 1vw; 
+    margin-bottom: 10px;
+}
+
+label,input{
+font-size: 15px;
+}
+input[text]{
+    width: 80%;
+    padding: 2vw; ;
+    margin: 2vw;
+    border: radius 1vw; 
+ 
+}
+
+
+input[type=submit]{
+width: 30%; 
+background-color: #E9207E;
+color: aliceblue;
+padding: 10px;
+margin-bottom: 10px;
+cursor: auto;
+}
+select[type=submit]{
+    width: 30%; 
+    background-color: #E9207E;
+    color: aliceblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: auto;
+    }
+    input[type="file"]  {
+    width: 30%; 
+    background-color: #E9207E;
+    color: aliceblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: auto;
+    }
+   button [type="submit"]{
+    width: 30%; 
+    background-color: #E9207E;
+    color: aliceblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: auto;
+    }
+  .formulario{
+ 
+ color: #E9207E;
+    border-radius: 5px;
+    background-color: aqua;
+    padding: 5%;
+    margin: 10% 20% ; 
+   /* border-left-width: 200px;
+    border-right-width: 200px;*/
+   }
+
+/*HEADER*/
+header{
+    display: flex;
+    flex-direction: column; /* controla el botón de crear Mi Evento*/    
+    background-position: top; 
+    background-size: 100%;
+    background-image: url("assets/img/banner.png");
+    background-repeat: no-repeat;
+    height:100px;
+    width: 100%;
+}header .cabecera{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: fixed;
+
+    height: 25px; 
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.25); 
+    font-family: fantasy;
+    color:white;
+    padding: 20px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: box-shadow 0.5s;
+}.cabecera:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+}
+
+header .cabecera .logo{ 
+    display: flex;
+    justify-content:flex-start;
+    align-items: center; 
+    
+    height: 25px; 
+    width:100%;
+    font-family: fantasy;
+    font-size: 23px;
+    color:rgb(255, 255, 255);
+    padding: 20px 20px 20px 20px;
+
+}
+ 
+header .cabecera a img{ 
+    width: 50px;
+    padding-right:20px;
+
+} 
+header .cabecera a {
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+}
+
+
+
+
+/*FOOTER*/
+footer{
+    display: flex;
+    justify-content:space-between;
+
+    padding: 120px;
+
+}
+footer p{
+    padding-left: 20px;
+
+}
+.redesSociales{
+    display: flex;
+    justify-content: space-between; 
+    gap:50px;
+
+    padding-right: 20px;
+
+}
+.redesSociales a img{
+    width:25px;
+}
+
+
+
+
+ 
+   
+  
+    
+    .footer{
+        display: flex;
+        padding:0px;
+    }
+
