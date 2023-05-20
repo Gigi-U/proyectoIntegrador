@@ -1,0 +1,21 @@
+*
+
+.cdiv{
+    display: flex;
+    background-color: rgb(31, 28, 188);(C:\Users\Cokito\proyectofinalcodocodo\proyectoIntegrador\assets\img\eventImages\gastro01.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: auto;
+    height: 50vw;
+    justify-content: center;
+    align-items: center;
+
+}
+ .form { 
+    background-color: aqua;
+    width: 250px;
+    height: 250px; 
+    padding-left: 50px;
+    justify-content: center;
+    
+}

@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Registrate</h1>
-    <form action="">
-    <label for="Nom">Nombre:</label>
-    <input type="text" name="Nombre" id="Nom" placeholder="Apellido, Nombre">
-    <br><br>
-    <label for="dni">DNI:</label>
-    <input type="number" name="DNI" id="dni" placeholder= "número sin puntos">
-    <br><br>
-    <label for="Dir">Dirección:</label>
-    <input type="text" name="Dirección" id="Dir">
-    <br><br>
-    <label for="Tel">Teléfono:</label>
-    <input type="tel" name="Tel" id="Tel">
-    <br><br>
-    <label for="email">email:</label>
-    <input type="email" name="email" id="email">
-    <br><br>
-    <label for="contr">contraseña:</label>
-    <input type="password" name="contraseña" id="contr">
-    <br><br>
-    <label for="contr">repetir contraseña:</label>
-    <input type="password" name="contraseña" id="contr">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="register.css">
   
-    <br><br>
-    <input type="submit" value="Enviar">
-    <!-- ESTO ME PARECE QUE NO VA !! <a href="/"><button class="registro">inicio</button></a>
-    <script src="register.js"></script> -->
-    </form>
+</head>
+
+<body>
+  <div class="cestilo1">
+    <div class="himagen"><img
+        src="C:\Users\Cokito\proyectofinalcodocodo\proyectoIntegrador\assets\img\eventImages\music02.png" alt=""
+        width="680px"></div>
+
+    <div class="hformulario">
+      <h1>Registrate</h1>
+      <form id="formulario" onsubmit="return validacionformulario()">
+        <label for="Nom">Nombre:</label>
+        <input type="text" name="Nombre" id="Nom" placeholder="Apellido, Nombre">
+        <br><br>
+        <label for="dni">DNI:</label>
+        <input type="number" name="DNI" id="dni" placeholder="número sin puntos">
+        <br><br>
+        <label for="Dir">Dirección:</label>
+        <input type="text" name="Dirección" id="Dir">
+        <br><br>
+        <label for="Tel">Teléfono:</label>
+        <input type="tel" name="Tel" id="Tel">
+        <br><br>
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <label for="contr">contraseña:</label>
+        <input type="password" name="contraseña" id="contr">
+        <br><br>
+        <label for="contras">repetir contraseña:</label>
+        <input type="password" name="contraseña" id="contras">
+
+        <br><br>
+        <input type="submit" value="Enviar">
+       
+      </form>
+    </div>
+  </div>
+  <!--<a href="/"><button class="registro">inicio</button></a>
+  <script src="register.js"></script> -->
+  <script src="register.js"></script>
 </body>
+
 </html>
