@@ -6,8 +6,12 @@ header{
 }
 
 /* para poder acceder al formulario la persona debe estar previamente logueada. esto implica que no necesitará los botones estando en la pagina del formulario. lor lo mismo los quitamos*/
-header .cabecera .registroLogin{ 
+header .cabecera .desplegable-burguer .registro-login { 
     display:none
+}
+
+#menu-check, #menu {
+    display:none;
 }
 *{
     margin:0px;
