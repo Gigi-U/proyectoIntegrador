@@ -13,10 +13,6 @@ header .cabecera .desplegable-burguer .registro-login {
 #menu-check, #menu {
     display:none;
 }
-*{
-    margin:0px;
-    border-radius: 10px;
-}
 p{ color:violet;}
 h2{
     text-align: center;
@@ -45,11 +41,8 @@ input[text]{
     width: 80%;
     padding: 2vw; ;
     margin: 2vw;
-    border: radius 1vw; 
- 
+    border: radius 1vw;  
 }
-
-
 input[type=submit]{
 width: 30%; 
 background-color: #E9207E;
