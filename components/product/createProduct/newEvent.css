@@ -18,9 +18,10 @@ header .cabecera .desplegable-burguer .registro-login {
     border-radius: 10px;
 }
 p{ color:violet;}
-h1{color: #E9207E;
-background: aqua;
-
+h2{
+    text-align: center;
+    color: #E9207E;
+    background: aqua;
     border-left-style: solid;
     border-left-width: 200px;
     border-right-width: 200px;
