@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Registrate</title>
   <link rel="stylesheet" href="register.css">
   
 </head>
@@ -19,17 +19,17 @@
     <div class="hformulario">
       <h1>Registrate</h1>
       <form id="formulario" onsubmit="return validacionformulario()">
-        <label for="Nom">Nombre:</label>
-        <input type="text" name="Nombre" id="Nom" placeholder="Apellido, Nombre">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="Nombre" id="nombre" placeholder="Apellido, Nombre">
         <br><br>
         <label for="dni">DNI:</label>
         <input type="number" name="DNI" id="dni" placeholder="número sin puntos">
         <br><br>
-        <label for="Dir">Dirección:</label>
-        <input type="text" name="Dirección" id="Dir">
+        <label for="dicc">Dirección:</label>
+        <input type="text" name="Dirección" id="dicc">
         <br><br>
-        <label for="Tel">Teléfono:</label>
-        <input type="tel" name="Tel" id="Tel">
+        <label for="tel">Teléfono:</label>
+        <input type="tel" name="Tel" id="tel">
         <br><br>
         <label for="email">email:</label>
         <input type="email" name="email" id="email">
@@ -41,8 +41,11 @@
         <input type="password" name="contraseña" id="contras">
 
         <br><br>
+        <span style="padding-left: 100px ;" >
         <input type="submit" value="Enviar">
-       
+        <input type="reset" value="Limpiar" >
+        </span>
+    
       </form>
     </div>
   </div>
