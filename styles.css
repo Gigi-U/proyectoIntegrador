@@ -16,17 +16,15 @@ header{
     width: 100%;
 }
 
-header .cabecera{ 
+header .cabecera{   
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
+    flex-wrap: wrap;
     position: fixed;
-    height: 25px; 
+    justify-content:center;
+    height: 2em; 
     width:100%;
     background-color: rgba(255, 255, 255, 0.25); 
-    font-family: fantasy;
-    color:white;
-    padding: 20px 20px 20px 20px;
+    padding: 10px 10px 20px 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: box-shadow 0.5s;
 }
@@ -34,35 +32,93 @@ header .cabecera{
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
-header .cabecera .logo{ 
+
+.cabecera .logo-fijo { 
     display: flex;
-    justify-content:flex-start;
-    align-items: center;     
-    height: 25px; 
-    width:100%;
+    position: absolute;
+    height: fit-content;
+    left:10px;
+    top:0px;
+    display: none;
+}
+
+.cabecera .logo-fijo .logo{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    align-items: center;      
     font-family: fantasy;
     font-size: 23px;
     color:rgb(255, 255, 255);
-    padding: 20px 20px 20px 20px;
+    width:fit-content;
+    height: fit-content;
+    left:12px;
+    margin: 10px;
 }
- 
-header .cabecera a img{ 
-    width: 50px;
+
+.logo-fijo .logo > div{   
+    width: 100px;
+    margin:0;
+} 
+.cabecera .logo-fijo .logo div a img{ 
+    width: 45px;
     padding-right:20px;
 } 
-header .cabecera a {
+.cabecera .logo-fijo  .logo div a {
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+}
+.cabecera .logo-fijo  .logo div p {
+    align-self: center;
+}
+
+.cabecera .desplegable-burguer{  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;  
+    width:98%;
+    font-family: fantasy;
+    color:white;
+    margin-right: 20px;
+    
+}
+.cabecera .desplegable-burguer .logo{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    align-items: center;    
+    font-family: fantasy;
+    font-size: 23px;
+    color:rgb(255, 255, 255);
+    width:fit-content;
+    height: 25px; 
+
+}
+.logo > div{    
+    width: 100px;
+    margin:0;
+} 
+.cabecera .desplegable-burguer .logo div a img{ 
+    width: 48px;
+    padding-right:20px;
+} 
+.cabecera .desplegable-burguer .logo div a {
     text-decoration:none;
     color:rgb(255, 255, 255);
 }
 
 /*BOTONES de RESERVA Y LOGIN*/
-header .cabecera .registroLogin{ 
+.cabecera .desplegable-burguer .registro-login{ 
     display: flex;
-    justify-content: flex-end;    
-    margin:0px 40px 0px 0px;
-    padding-right:20px;
+    flex-wrap: wrap;
+    justify-content:space-between; 
+    width:fit-content;
 }
-header .cabecera .registroLogin .registro{
+.registro-login > div{    
+    width: 100px;
+    padding-left:20px
+} 
+.cabecera .desplegable-burguer .registro-login div .registro{
     height: 36px;
     width: 100px;
     border-radius: 20px;
@@ -71,7 +127,6 @@ header .cabecera .registroLogin .registro{
     background-color: #E9207E;    
     border: none;
     color:white;
-    margin-right:20px;
     box-shadow: rgba(79, 6, 45, 0.35) 0px 5px 15px;
     transition: box-shadow 0.5s;
 }
@@ -80,7 +135,7 @@ header .cabecera .registroLogin .registro{
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
- header .cabecera .registroLogin .login{
+.cabecera .desplegable-burguer .registro-login div .login{
     height: 36px;
     width: 100px;
     border-radius: 20px;
@@ -92,19 +147,22 @@ header .cabecera .registroLogin .registro{
     box-shadow: rgba(79, 6, 45, 0.35) 0px 5px 15px;
     transition: box-shadow 0.5s;
 }
-.login:hover {
+.cabecera .desplegable-burguer .registro-login div .login:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 0.5s;
+}
+.cabecera .desplegable-burguer .registro-login div .registro:hover {
     cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
 }
  /* MENÚ HAMBURGUESA PARA CELULARES - con js incluimos los botones de registro y login + cerrar sesión*/
-.burger {
-    width: 100%;
+#menu-check, #menu {
     display:none;
 }
-
  /*BOTON DE CREAR EVENTO*/
- header .botonCrearEvento {
+header .botonCrearEvento {
     display: flex;
     justify-content: flex-end; 
     align-items: center;
@@ -301,10 +359,11 @@ main{
     font-weight: 400;
     padding:5px;
     font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .event-info{
     font-size: 11px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 /*para el div de inicio*/
@@ -413,6 +472,7 @@ footer p{
     .cabecera .logo a img {
         width:40px;
     }
+
     .botonCrearEvento a button{
         font-size: 8px;
         margin:80px 75px 0px 0px;
@@ -457,7 +517,6 @@ footer p{
     }
     .footer{
         display: flex;
-        flex-wrap: wrap;
         margin-bottom: 5px;
     }
 
@@ -473,33 +532,122 @@ footer p{
         justify-content: space-between; 
     }
     .cabecera{ 
-        align-items: center; 
-        position: fixed; 
-        font-size: 20px;
-     
+        font-size: 20px;  
     }
-    .cabecera .logo a img {
-        width:40px;
+    .cabecera .logo-fijo{
+        border-color: #fd0076;
+        display: flex;
+        align-items: center;
+        justify-content: start;
     }
-    .registroLogin a button{
+    .cabecera .desplegable-burguer{ 
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+    }
+  .cabecera .desplegable-burguer .logo{
+    height: fit-content;
+    width: 100%;
+    }
+    .cabecera .desplegable-burguer .logo div{
+    margin-right: 20px;
+    }
+    .cabecera .desplegable-burguer .logo div a{
+        width: 40%;
+    }
+
+    .cabecera .desplegable-burguer .registro-login{
+        width: 95%;
+    }
+    .cabecera .desplegable-burguer .registro-login > div .login{
+        width: 120px;
+        height: 43px;
+        margin-right: 2.5em;
+
+    }    
+    .cabecera .desplegable-burguer .registro-login > div .registro{
+        width: 120px;
+        height: 43px;
+        margin-right: 2.5em;
+
+    }   
+    /*Menú Hamburguesa*/
+
+    #menu-check:not(:checked)~ .desplegable-burguer {
         display:none;
     }
-    .burger {
-        width: 100%;
+   
+    #menu-check:checked ~ .desplegable-burguer {
         display:block;
-        padding-left:70px;
+        padding-right: 0;
+        padding-left: 0;
     }
+   
+    #menu{
+        display:block;
+        font-size: 1.2em;
+        color:white;
+        font-weight:bold;
+        position:absolute;
+        right: 3em;
+        z-index: 1000;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    #menu:hover{
+        cursor: pointer;
+        box-shadow: none;
+        transition: box-shadow 0.5s;    
+    }
+    #menu-cerrar{
+        display:none;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #menu-check:checked ~ label #menu-abrir{
+        display:none;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar{
+        display:block;
+    }        
+    
+   .cabecera .desplegable-burguer {
+        padding-top:6em;
+        background-color: rgba(0, 0, 0, 0.901);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        position: fixed;
+        width: 100%;
+        height:fit-content;
+    }
+    .cabecera .desplegable-burguer .logo > div a {
+        padding-left:2em;   
+        margin-right:1em;        
+    }
+    .cabecera .desplegable-burguer .registro-login {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center;
+        width:100%;
+        align-items: center;
+    }
+    .registro-login > div {
+        margin: .5em 0 .7em 0;
+        width: 140px;
+    }
+
+
+    /*--------------hasta acá--------------*/
     .botonCrearEvento{
         display: flex;
         align-items:center;
-
     }
     .botonCrearEvento a button{
-        font-size: 8px;
+        font-size: 12px;
         margin:70px 150px 0px 0px;
-        height:30px;
-        width: 90px;
-        margin:115px 150px 0px 0px;
+        height:40px;
+        width: 120px;
+        margin:115px 140px 0px 0px;
         border-color:#E9207E ;
         background-color: #E9207E;  
         box-shadow: rgba(79, 6, 45, 0.35) 0px 5px 15px;  
@@ -562,5 +710,13 @@ footer p{
         display: flex;
         padding:0px;
     }
-
+    .redesSociales{
+        display: flex;
+        justify-content: space-between; 
+        gap:20px;
+        padding-right: 20px;
+    }
+    .redesSociales a img{
+        width:25px;
+    }
 }

@@ -1,25 +1,31 @@
+*{
+    margin:0px;
+    border-radius: 10px;
+}
+/*HEADER*/
 header{
     background-color:#D8E450;
     background-image:none;
     height:65px;
 }
+
 /* para poder acceder al formulario la persona debe estar previamente logueada. esto implica que no necesitará los botones estando en la pagina del formulario. lor lo mismo los quitamos*/
-header .cabecera .registroLogin{ 
+header .cabecera .desplegable-burguer .registro-login { 
     display:none
 }
-*{
-    margin:0px;
-    border-radius: 10px;
+
+#menu-check, #menu {
+    display:none;
 }
 p{ color:violet;}
-h1{color: #E9207E;
-background:#D8E450;
+h2{color: #E9207E;
+  background:#D8E450;
+  border-left-style: solid;
+  border-left-width: 200px;
+  border-right-width: 200px;
+  border-right-style: solid;
+  height: max-content
 
-    border-left-style: solid;
-    border-left-width: 200px;
-    border-right-width: 200px;
-    border-right-style: solid;
-    height: max-content
 }
 button{
     width: 80px; ;
@@ -31,7 +37,7 @@ button{
     margin-bottom: 10px;
 }
 
- textarea{
+textarea{
 
  width: 120px;
 height: 30px;}
@@ -46,16 +52,15 @@ input[text]{
     margin: 2vw;
     border: radius 1vw; 
  
-}input[type=reset]{
-    width: 30%; 
-    background-color: #E9207E;
-    color: aliceblue;
-    padding: 10px;
-    margin-bottom: 10px;
-    cursor: auto;
-    }
-
-
+  }input[type=reset]{
+      width: 30%; 
+      background-color: #E9207E;
+      color: aliceblue;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: auto;
+  } 
+}
 input[type=submit]{
 width: 30%; 
 background-color: #E9207E;
@@ -90,7 +95,7 @@ select[type=submit]{
     }
   .formulario{
  
- color: #E9207E;
+    color: #E9207E;
     border-radius: 5px;
     background-color: aqua;
     padding: 5%;
@@ -98,21 +103,21 @@ select[type=submit]{
    /* border-left-width: 200px;
     border-right-width: 200px;*/
    }
-
-  @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 
     main {
         margin: 5px;
         border-radius: 10px;
 
     }
+}
 
-    @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
 
         main{
             margin:5px;
             border-radius: 20px;
             flex: content;
-        }
- 
-    }}
+        } 
+}
+
