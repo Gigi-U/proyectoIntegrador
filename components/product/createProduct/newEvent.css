@@ -30,6 +30,10 @@ button{
     border: radius 1vw; 
     margin-bottom: 10px;
 }
+ textarea{
+
+ width: 120px;
+height: 30px;}
 
 label,input{
 font-size: 15px;
@@ -40,7 +44,14 @@ input[text]{
     margin: 2vw;
     border: radius 1vw; 
  
-}
+}input[type=reset]{
+    width: 30%; 
+    background-color: #E9207E;
+    color: aliceblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: auto;
+    }
 
 
 input[type=submit]{
