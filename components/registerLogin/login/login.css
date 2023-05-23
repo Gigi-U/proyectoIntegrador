@@ -23,3 +23,9 @@
     margin-bottom: 10%;
 
 }
+header .cabecera .desplegable-burguer .registro-login { 
+    display:none
+}
+#menu-check, #menu {
+    display:none;
+}
