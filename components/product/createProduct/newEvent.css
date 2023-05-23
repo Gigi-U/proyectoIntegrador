@@ -1,7 +1,3 @@
-*{
-    margin:0px;
-    border-radius: 10px;
-}
 /*HEADER*/
 header{
     background-color:#D8E450;
@@ -17,7 +13,10 @@ header .cabecera .desplegable-burguer .registro-login {
 #menu-check, #menu {
     display:none;
 }
-
+*{
+    margin:0px;
+    border-radius: 10px;
+}
 h2{color: #E9207E;
   background:#D8E450;
   border-left-style: solid;
@@ -110,14 +109,14 @@ select[type=submit]{
         border-radius: 10px;
 
     }
-}
 
-@media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 400px) {
 
         main{
             margin:5px;
             border-radius: 20px;
             flex: content;
-        } 
-}
+        }
+ 
+}}
 
