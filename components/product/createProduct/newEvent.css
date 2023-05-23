@@ -13,7 +13,7 @@ header .cabecera .registroLogin{
 }
 p{ color:violet;}
 h1{color: #E9207E;
-background: aqua;
+background:#D8E450;
 
     border-left-style: solid;
     border-left-width: 200px;
@@ -30,6 +30,7 @@ button{
     border: radius 1vw; 
     margin-bottom: 10px;
 }
+
  textarea{
 
  width: 120px;
@@ -38,6 +39,7 @@ height: 30px;}
 label,input{
 font-size: 15px;
 }
+
 input[text]{
     width: 80%;
     padding: 2vw; ;
@@ -97,8 +99,20 @@ select[type=submit]{
     border-right-width: 200px;*/
    }
 
+  @media only screen and (max-width: 800px) {
 
+    main {
+        margin: 5px;
+        border-radius: 10px;
 
+    }
 
+    @media only screen and (max-width: 400px) {
+
+        main{
+            margin:5px;
+            border-radius: 20px;
+            flex: content;
+        }
  
-   
+    }}
