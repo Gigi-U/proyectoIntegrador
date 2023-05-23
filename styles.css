@@ -162,7 +162,7 @@ header .cabecera{
     display:none;
 }
  /*BOTON DE CREAR EVENTO*/
- header .botonCrearEvento {
+header .botonCrearEvento {
     display: flex;
     justify-content: flex-end; 
     align-items: center;
