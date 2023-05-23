@@ -1,30 +1,33 @@
 .cestilo1 {
 
-    display: flex;
-    height: 50vw;
+    display: inline-flex;
+    width: 100vw;
+    height: 40vw;
     justify-content: flex-start;
     color: aliceblue;
-    margin: auto;
-    border-radius: 20px;
     background: rgb(188, 223, 136);
+  
 }
 
 .divimg {
     width: 50vw;
     overflow: auto;
-    padding-top: 150px;
-    padding-left: 150px;
     background-image: url(/assets/img/loginImages/register.jpg);
-    border-radius: 25px;
+    background-size: 40vw;
+    margin-top: 75px;
+    margin-left: 100px;
+    background-repeat: no-repeat;
+    
 }
 .hformulario {
-    width: 50%;
-    height: 50%;
+    
+    width: 35vw;
+    height: 40vw;
     text-align: left;
-    font-size: 20px;
-    padding-top: 100px;
-    padding-left: 60px;
-
+    font-size: 22px;
+    padding-top: 10px;
+    margin-top: 50px;
+    
 }
 
 input {
@@ -44,4 +47,4 @@ header{
     background-color:#D8E450;
     background-image:none;
     height: 60px;
-}
+} 
