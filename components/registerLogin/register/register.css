@@ -34,3 +34,15 @@ input {
 
 
 }
+header .cabecera .desplegable-burguer .registro-login { 
+    display:none
+}
+#menu-check, #menu {
+    display:none;
+}
+/*HEADER*/
+header{
+    background-color:#D8E450;
+    background-image:none;
+    height: 60px;
+}
