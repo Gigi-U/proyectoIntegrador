@@ -2,7 +2,7 @@
 header{
     background-color:#D8E450;
     background-image:none;
-    height:65px;
+    height: 60px;
 }
 
 /* para poder acceder al formulario la persona debe estar previamente logueada. esto implica que no necesitará los botones estando en la pagina del formulario. lor lo mismo los quitamos*/
@@ -13,17 +13,24 @@ header .cabecera .desplegable-burguer .registro-login {
 #menu-check, #menu {
     display:none;
 }
+
+
 *{
     margin:0px;
     border-radius: 10px;
 }
+header .cabecera{
+      border-radius: 0px;
+}
+
 h2{color: #E9207E;
-  background:#D8E450;
+background:#D8E450;
+
   border-left-style: solid;
-  border-left-width: 200px;
-  border-right-width: 200px;
+  border-left-width: 400px;
+  border-right-width: 400px;
   border-right-style: solid;
-  height: max-content
+  height: 40px;
 
 }
 button{
@@ -59,7 +66,7 @@ input[text]{
       margin-bottom: 10px;
       cursor: auto;
   } 
-}
+
 input[type=submit]{
 width: 30%; 
 background-color: #E9207E;
@@ -102,6 +109,7 @@ select[type=submit]{
    /* border-left-width: 200px;
     border-right-width: 200px;*/
    }
+
 @media only screen and (max-width: 800px) {
 
     main {
@@ -119,4 +127,5 @@ select[type=submit]{
         }
  
 }}
+
 
