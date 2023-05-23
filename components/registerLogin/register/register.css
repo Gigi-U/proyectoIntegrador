@@ -15,12 +15,9 @@
     padding-top: 150px;
     padding-left: 150px;
     background-image: url(/assets/img/loginImages/register.jpg);
-}
-.diving .img{
     width:500px;
     border-radius: 25px;
 }
-
 .hformulario {
     width: 50%;
     height: 50%;
