@@ -1,8 +1,7 @@
-*
-
-.cdiv{
+.cdiv {
     display: flex;
-    background-color: rgb(31, 28, 188);(C:\Users\Cokito\proyectofinalcodocodo\proyectoIntegrador\assets\img\eventImages\gastro01.png);
+    background-image: url(/assets/img/loginImages/login.jpg);
+    background-size: 100vw;
     background-repeat: no-repeat;
     background-position: center;
     padding: auto;
@@ -11,11 +10,16 @@
     align-items: center;
 
 }
- .form { 
-    background-color: aqua;
+
+.form {
+    background-color: rgb(153, 212, 57);
+    color: rgb(6, 7, 7);
+    border-radius: 25px;
+    opacity: 0.9;
     width: 250px;
-    height: 250px; 
+    height: 250px;
     padding-left: 50px;
     justify-content: center;
-    
+    margin-bottom: 10%;
+
 }
