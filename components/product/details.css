@@ -1,10 +1,18 @@
+*{
+    margin: 0;
+}
 header{
     background-color:#D8E450;
     background-image:none;
     height:65px;
+    width: 100%;
 }
+
 .event-name{
-    color: #E9207E;
+    color: #454545;
+    display: flex;
+    justify-content: center;    
+    align-items:center;  
 }
 .slider-frame{
     width: 90%;
@@ -45,37 +53,45 @@ header{
     -35px -35px 80px #ffffff;    
     margin:.2em;
 }
-.event-info{
-    font-size: 20px;
-}
-.event-map iframe{
-    border:0;
-    border-radius: 25px;
-}
-.event-map{
-    display: inline;
-    align-items: center;
-    justify-content: center;
-}
-.info-container{
-    display: inline;
-
-}
-.guardar-evento{
+section{
     display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin:20px 0 20px 0;
     align-items: center;
+}
 
+.info-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:center;    
+    align-items:center;
+    background-color:rgb(235, 229, 70);
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+}
+.info-container p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.info-container h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.guardar-evento{    
+    margin: 20px 0 20px 0;
 }
 .guardar-evento button{
     height: 45px;
-    width: 200px;
+    width: 150px;
     border-radius: 20px;
     cursor: pointer;
     font-weight: 600;
     background-color: #E9207E;    
     border: none;
     color:white;
-    margin-right:20px;
     box-shadow: rgba(79, 6, 45, 0.35) 0px 5px 15px;
     transition: box-shadow 0.5s;
 }
@@ -83,4 +99,34 @@ header{
     cursor: pointer;
     box-shadow: none;
     transition: box-shadow 0.5s;
+}
+
+
+.not-ready{
+    text-align: center;    
+    align-items:center;
+}
+.not-ready span p{
+    font-size: 20px;
+    background-color: yellow;
+    font-weight:bold;
+}
+.event-info{
+    display: flex;
+    justify-content: center;    
+    align-items:center; 
+    flex-wrap: wrap;
+    font-size: 18px;
+    margin: 25px ;
+    text-align: center;
+}
+
+.event-map{
+    display: flex;
+    justify-content: center;    
+    align-items:center
+}
+.event-map iframe{
+    border:0;
+    border-radius: 25px;
 }
